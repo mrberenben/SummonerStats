@@ -1,0 +1,43 @@
+.appHeader {
+  position: relative;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 1.625rem;
+  border-bottom: 1px solid var(--border);
+  background-color: var(--main);
+}
+
+.appLogo {
+  font-size: 1.25rem;
+  font-weight: 600;
+  letter-spacing: .0125rem;
+  color: #292a2f;
+}
+
+.routes {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+}
+
+.route {
+  display: flex;
+  margin: 0 .25rem;
+}
+
+.route a {
+  font-family: 'Rubik', sans-serif;
+  font-size: 1rem;
+  padding: .5rem 1.125rem;
+  border-radius: 2px;
+  -webkit-transition: .15s color cubic-bezier(0.23, 1, 0.32, 1);
+  -moz-transition: .15s color cubic-bezier(0.23, 1, 0.32, 1);
+  -o-transition: .15s color cubic-bezier(0.23, 1, 0.32, 1);
+  transition: .15s color cubic-bezier(0.23, 1, 0.32, 1);
+}
+.route a:not(.routeActive):hover { color: var(--light-600) }
+
+.route .routeActive { background-color: #f2f4f8 } 

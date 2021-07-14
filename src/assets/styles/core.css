@@ -1,0 +1,101 @@
+::selection {
+  background-color: var(--primary);
+  color: var(--main);
+}
+
+::placeholder {
+  color: var(--placeholder);
+}
+
+*,
+*::before,
+*::after {
+  border: none;
+  outline: none;
+  list-style: none;
+  box-sizing: border-box;
+  border-collapse: inherit;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html, body {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.6667;
+  background-color: var(--main);
+  color: var(--primary);
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a, a:hover { color: inherit; text-decoration: none }
+
+h1, h2, h3,
+h4, h5, h6 {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+  line-height: inherit;
+  font-weight: inherit;
+  font-size: inherit;
+}
+p {
+  margin: 0;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+}
+
+button, input {
+  box-shadow: none;
+  outline: none;
+  margin: 0;
+  padding: 0;
+  font-size: 1rem;
+}
+
+button, a[role="button"] { 
+  cursor: pointer;
+  -webkit-transition: .15s transform cubic-bezier(0.23, 1, 0.32, 1);
+  -moz-transition: .15s transform cubic-bezier(0.23, 1, 0.32, 1);
+  -o-transition: .15s transform cubic-bezier(0.23, 1, 0.32, 1);
+  transition: .15s transform cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+button:not(.js-disabled):active, a[role="button"]:not(.js-disabled):active {
+  -webkit-transform: scale(.98);
+  -moz-transform: scale(.98);
+  -o-transform: scale(.98);
+  transform: scale(.98);
+}
+
+ul, ol, li {
+  list-style-type: none;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+  padding-inline-start: 0;
+}
+
+textarea { resize: none }
+
+
+#react-root, .page {
+  display: flex; flex: 1;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.page { background-color: var(--main-secondary) }
