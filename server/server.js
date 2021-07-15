@@ -6,6 +6,7 @@ const fs = require('fs');
 
 const getSummoner = require("./routes/getSummoner")
 const getMatches = require("./routes/getMatches")
+const getMatch = require("./routes/getMatch")
 
 const router = express.Router();
 const app = express();
@@ -46,6 +47,10 @@ router.get('/getSummoner/:getBy/:region/:account', (req, res) => {
 */
 router.get('/getMatches/:region/:puuid', (req, res) => {
   getMatches(req, res, API_KEY)
+})
+
+router.get('/getMatch/:matchid', (req, res) => {
+  getMatch(req, res, API_KEY)
 })
 
 app.use('/', router);
